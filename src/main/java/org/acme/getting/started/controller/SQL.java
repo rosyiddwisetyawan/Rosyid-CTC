@@ -1,4 +1,4 @@
-package org.acme.getting.started.model;
+package org.acme.getting.started.controller;
 
 import java.io.IOException;
 import java.sql.Connection;

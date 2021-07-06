@@ -1,21 +1,16 @@
 package org.acme.getting.started;
 
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.SQLException;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriInfo;
 
-import org.acme.getting.started.model.SQL;
-import org.acme.getting.started.utils.SqlUtils;
+import org.acme.getting.started.controller.SQL;
 import org.jboss.resteasy.reactive.RestPath;
-import org.jboss.resteasy.reactive.RestQuery;
 
 
 @Path("/v2")
