@@ -17,25 +17,20 @@ public class SqlUtils {
 	public static Connection connect() throws IOException {
 		
 		
-//    	ClassLoader loader = Thread.currentThread().getContextClassLoader();
-//    	Properties props = new Properties();
-//    	String driver = null;
-//		String user = null;
-//		String url = null;
-//		String password = null;
-//    	try(InputStream resourceStream = loader.getResourceAsStream(resourceName)) {
-//    	    props.load(resourceStream);
-//    	    driver = props.getProperty("db_driver");
-//    	    user = props.getProperty("db_user");
-//    	    url = props.getProperty("db_url");
-//    	    password = props.getProperty("db_password");
-//    	}
+    	ClassLoader loader = Thread.currentThread().getContextClassLoader();
+    	Properties props = new Properties();
+    	String driver = null;
+		String user = null;
+		String url = null;
+		String password = null;
+    	try(InputStream resourceStream = loader.getResourceAsStream(resourceName)) {
+    	    props.load(resourceStream);
+    	    driver = props.getProperty("db_driver");
+    	    user = props.getProperty("db_user");
+    	    url = props.getProperty("db_url");
+    	    password = props.getProperty("db_password");
+    	}
     	
-    	String driver = "org.postgresql.Driver";
-		String user = "admin";
-		String url = "jdbc:postgresql://127.0.0.1:5432/postgres";
-		String password = "admin";
-		
 		Connection conn = null;
 		try {
 			Class.forName(driver);
